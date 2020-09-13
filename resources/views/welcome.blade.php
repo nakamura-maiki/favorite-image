@@ -2,7 +2,8 @@
 
 @section('content')
     @if (Auth::check())
-        {{ Auth::user()->name }}
+        {{-- ユーザ一覧 --}}
+        @include('users.show')
     @else
         <div class="center jumbotron">
             <div class="text-center">

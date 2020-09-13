@@ -1,0 +1,39 @@
+.icon {
+    margin-bottom: 30px;
+}
+
+.panda {
+   border-radius: 50%;
+   width: 200px;
+   height: 200px;
+   background-position: center center;
+}
+
+.user-name {
+    font-size: 30px;
+    color: #555555;
+    letter-spacing: 0.2em;
+    margin-left: 40px;
+}
+
+.container-fluid {
+    margin-top: 60px;
+}
+
+#itembar {
+    color:#fff;
+}
+
+ul {
+    border-radius: 10px;
+}
+
+#itembtn {
+    /*position: relative;*/
+    /*bottom: 40;*/
+    padding-top: 25px;
+    height: 80px;
+    font-size: 20px;
+    letter-spacing: 0.3em;
+    background-color: #444444;
+}

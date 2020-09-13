@@ -5,6 +5,7 @@
         <title>favorite-image</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <link href="{{asset('/assets/css/app.css')}}" rel="stylesheet">
     </head>
 
     <body>
@@ -12,7 +13,7 @@
         {{-- ナビゲーションバー --}}
         @include('commons.navbar')
 
-        <div class="container">
+        <div class=".container-fluid">
             {{-- エラーメッセージ --}}
             @include('commons.error_messages')
 
