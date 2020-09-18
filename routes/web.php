@@ -10,10 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+//ログイン後に投稿一覧をマイページに挿入するURL
+Route::get('/', 'ItemsController@index');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // ユーザ登録
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');

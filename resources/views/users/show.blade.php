@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="icon">
-        <!--//プロフ画　名前-->
+        <!--//プロフ画 名前-->
         <img class="panda" src="{{ asset('/assets/images/8f38873ed4da475b6a88d67b9c3d52d2.jpg') }}" alt="プロフィール画像"></img>
         <p class="user-name" style="display: inline-block;" pb-50>{{ Auth::user()->name }}</p>
     </div>
@@ -20,7 +20,10 @@
         </div>
         
         <div class="offset-md-1 col-md-3">
-            <a href="#" id="itembtn" class="btn btn-outline-light">アイテム登録</a>
+            {{-- メッセージ作成ページへのリンク --}}
+            {!! link_to_route('items.create', 'アイテム登録', [], ['id' => 'itembtn', 'class' => ' btn btn-outline-light']) !!}
+
+            
         </div>
         
     </div>

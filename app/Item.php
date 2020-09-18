@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
-    protected $fillable = ['category＿id', 'note'];
+    protected $fillable = [
+        'category＿id', 'note',
+        ];
     
     /**
      * この投稿を所有するユーザ。（ Userモデルとの関係を定義）

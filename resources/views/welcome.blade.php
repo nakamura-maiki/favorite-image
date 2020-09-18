@@ -4,6 +4,14 @@
     @if (Auth::check())
         {{-- ユーザ一覧 --}}
         @include('users.show')
+        
+        <div class="row">
+            <div class="col-sm-8">
+              　投稿一覧
+                @include('users.items')
+            </div>
+        </div>
+        
     @else
         <div class="center jumbotron">
             <div class="text-center">
