@@ -29,4 +29,5 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UsersController', ['only' => ['show']]);
     Route::resource('items', 'ItemsController', ['only' => ['create', 'store', 'edit', 'update', 'destroy']]);
+    Route::get('items/categories/{id}', 'ItemsController@search')->name('category.items');
 });

@@ -8,11 +8,12 @@
     <div class="row">
         <div class="col-6">
              {!! Form::model($item, ['route' => 'items.store']) !!}
+             @csrf
 
                 <div class="form-group">
                     {!! Form::label('category_id', 'カテゴリ') !!}
                     
-                    {!! Form::select('category_id', ['1' => 'トップス', '2' => 'ボトムス', '3' => 'ワンピース'], '', ['placeholder' => '選択してください','class' => 'form-control']) !!}
+                    {!! Form::select('category_id', config('const.Categories'), '', ['placeholder' => '選択してください','class' => 'form-control']) !!}
                     
                     {{-- {!! Form::text('category_id', null, ['class' => 'form-control']) !!} --}}
 

@@ -1,21 +1,27 @@
 
 @if (count($items) > 0)
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>カテゴリ</th>
-                    <th>メモ</th>
-                </tr>
-            </thead>
-            <tbody>
+       
                 @foreach ($items as $item)
-                <tr>
-                    <td>{{ $item->category＿id }}</td>
-                    <td>{{ $item->note }}</td>
-                </tr>
+                
+                <div>
+                    {{-- 投稿内容 --}}
+                    <p class="mb-0">
+                        {!! config('const.Categories')[$item->category_id] !!}
+                        {!! nl2br(e($item->note)) !!}
+                        
+                    </p>
+                </div>
+                
+                <div>
+                    @if (Auth::id() == $item->user_id)
+                        {{-- 投稿削除ボタンのフォーム --}}
+                        {!! Form::open(['route' => ['items.destroy', $item->id], 'method' => 'delete']) !!}
+                            {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
+                        {!! Form::close() !!}
+                    @endif
+                </div>
+                
                 @endforeach
-            </tbody>
-        </table>
+           
 @endif
 
-{!! link_to_route('items.create', 'アイテム登録', [], ['class' => 'btn btn-primary']) !!}

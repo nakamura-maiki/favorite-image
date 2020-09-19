@@ -26,6 +26,33 @@ class ItemsController extends Controller
            return view('welcome', $data);
     }
     
+    public function search($id)
+    {
+        
+        // 認証済みユーザを取得
+        $user = \Auth::user();
+        
+        if($id != 0) {
+        
+        //where文で$idで、category_idを絞り込む
+        $items = $user->items()->where('category_id', $id)->orderBy('created_at', 'desc')->get();
+        
+        }
+        
+        else {
+        
+        // ユーザの投稿の一覧を作成日時の降順で取得
+        $items = $user->items()->orderBy('created_at', 'desc')->get();
+
+        }
+        
+        $data = [
+            'user' => $user,
+            'items' => $items,
+        ];
+       return view('welcome', $data);
+    }
+    
     
     // 新規作成フォーム(以下メッセージボード参考)
     public function create()
@@ -45,12 +72,15 @@ class ItemsController extends Controller
             'category_id' => 'required', 
         ]);
         
+        
+        
         // メッセージを作成
         $item = new Item;
         $item->user_id = $request->user()->id;
         $item->category_id = $request->category_id;
         $item->note = $request->note;
         $item->save();
+        
         
         // トップページへリダイレクトさせる
         return redirect('/');

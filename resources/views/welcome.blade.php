@@ -7,8 +7,9 @@
         
         <div class="row">
             <div class="col-sm-8">
-              　投稿一覧
-                @include('users.items')
+                
+             投稿一覧
+            {{-- @include('users.items') --}}
             </div>
         </div>
         

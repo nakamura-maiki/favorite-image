@@ -12,10 +12,10 @@
         <!--//ツールバーと「アイテム登録ボタン」-->
         <div class="col-sm-8">
                 <ul class="nav nav-tabs nav-justified mb-3 navbar-dark" style="background-color:#444444;">
-                    <li class="nav-item"><a href="#" id="itembar" class="nav-link">アイテム一覧</a></li>
-                    <li class="nav-item"><a href="#" id="itembar" class="nav-link">トップス</a></li>
-                    <li class="nav-item"><a href="#" id="itembar" class="nav-link">ボトムス</a></li>
-                    <li class="nav-item"><a href="#" id="itembar" class="nav-link">ワンピース</a></li>
+                    <li class="nav-item"><a href="{{ route('category.items', "0" ) }}" id="itembar" class="nav-link">アイテム一覧</a></li>
+                    <li class="nav-item"><a href="{{ route('category.items', "1" ) }}" id="itembar" class="nav-link">トップス</a></li>
+                    <li class="nav-item"><a href="{{ route('category.items', "2" ) }}" id="itembar" class="nav-link">ボトムス</a></li>
+                    <li class="nav-item"><a href="{{ route('category.items', "3" ) }}" id="itembar" class="nav-link">ワンピース</a></li>
                 </ul>
         </div>
         
@@ -27,5 +27,7 @@
         </div>
         
     </div>
+    
+    @include('users.items')
     
 @endsection
