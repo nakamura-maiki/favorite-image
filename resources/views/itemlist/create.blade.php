@@ -3,9 +3,9 @@
 
 @section('content')
 
- <h1>アイテム登録</h1>
+ <h1 class="item-registration">アイテム登録</h1>
 
-    <div class="row">
+    <div class="row justify-content-center input-items">
         <div class="col-6">
              {!! Form::model($item, ['route' => 'items.store']) !!}
              @csrf
@@ -24,7 +24,7 @@
                     {!! Form::text('note', null, ['class' => 'form-control']) !!}
                 </div>
 
-                {!! Form::submit('投稿', ['class' => 'btn btn-primary']) !!}
+                {!! Form::submit('投稿', ['class' => 'btn btn-outline-light showbtn']) !!}
 
             {!! Form::close() !!}
         </div>

@@ -2,9 +2,9 @@
 
 @section('content')
 
-    <h1>アイテム編集ページ</h1>
+    <h1 class=item-registration>アイテム編集ページ</h1>
 
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-6">
             {!! Form::model($item, ['route' => ['items.update', $item->id], 'method' => 'put']) !!}
 
@@ -23,7 +23,7 @@
                     {!! Form::text('note', null, ['class' => 'form-control']) !!}
                 </div>
                 
-                {!! Form::submit('更新', ['class' => 'btn btn-primary']) !!}
+                {!! Form::submit('更新', ['id' => 'showbtn', 'class' => 'btn btn-primary']) !!}
 
             {!! Form::close() !!}
         </div>

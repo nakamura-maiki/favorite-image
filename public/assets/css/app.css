@@ -1,3 +1,10 @@
+body {
+    background-image: url(/assets/images/t112c.jpg);
+    background-color:rgba(255,255,255,0.8);
+    background-blend-mode:lighten;
+    background-size: cover;
+}
+
 .icon {
     margin-bottom: 30px;
 }
@@ -20,7 +27,7 @@
     margin-top: 70px;
 }
 
-#itembar {
+.itembar {
     color:#fff;
 }
 
@@ -28,12 +35,43 @@ ul {
     border-radius: 10px;
 }
 
-#itembtn {
-    /*position: relative;*/
-    /*bottom: 40;*/
+.itembtn {
     padding-top: 25px;
     height: 80px;
     font-size: 20px;
     letter-spacing: 0.3em;
     background-color: #444444;
+    border-radius: 12px;
+}
+
+.item-registration {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.input-items {
+    position: relative;
+}
+
+.showbtn {
+    position: absolute;
+    right: 10px;
+    
+    margin-top: 40px;
+    margin-left: 348px;
+    padding: 0px 30px;
+    height: 50px;
+    background-color: #444444;
+    border-radius: 12px;
+}
+
+.item-list {
+    margin-top: 50px;
+}
+
+.list {
+    background-image: url(/assets/images/612GpiquSeL._AC_.jpg);
+    background-color:rgba(255,255,255,0.8);
+    background-blend-mode:lighten;
+    background-size: cover;
 }

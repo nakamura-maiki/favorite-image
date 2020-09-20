@@ -54,7 +54,7 @@ class ItemsController extends Controller
     }
     
     
-    // 新規作成フォーム(以下メッセージボード参考)
+    // 新規作成フォーム
     public function create()
     {
         $item = new Item;
