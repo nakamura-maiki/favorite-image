@@ -1,5 +1,5 @@
 body {
-    background-image: url(/assets/images/t112c.jpg);
+    background-image: url(/assets/images/612GpiquSeL._AC_.jpg);
     background-color:rgba(255,255,255,0.8);
     background-blend-mode:lighten;
     background-size: cover;
@@ -70,9 +70,3 @@ ul {
     margin-bottom: 50px;
 }
 
-.list {
-    background-image: url(/assets/images/612GpiquSeL._AC_.jpg);
-    background-color:rgba(255,255,255,0.8);
-    background-blend-mode:lighten;
-    background-size: cover;
-}

@@ -7,7 +7,27 @@
 
     <div class="row justify-content-center input-items">
         <div class="col-6">
+            
+            <!--<form action="/upload" method="post" enctype="multipart/form-data">-->
+            <!--  {{ csrf_field() }}-->
+            <!--  <input type="file" name="file">-->
+            <!--  <button type="submit">保存</button>-->
+            <!--</form>-->
+            
+            {!! Form::open(['url' => '/upload', 'method' => 'post', 'class' => 'form', 'files' => true]) !!}
+            <div class="form-group">
+                {!! Form::label('myfile', 'Upload a file') !!}
+                {!! Form::file('myfile', null) !!}
+            </div>
+            <div class="form-group">
+                {!! Form::submit('Upload') !!}
+            </div>
+                {!! Form::close() !!}
+            
              {!! Form::model($item, ['route' => 'items.store']) !!}
+             
+             
+             
              @csrf
 
                 <div class="form-group">
